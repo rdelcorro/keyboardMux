@@ -75,7 +75,7 @@
 		<boolean value="false" />
 	</attribute>
 	<attribute id="0x0205">
-		<boolean value="false" />
+		<boolean value="true" />
 	</attribute>
 	<attribute id="0x0206">
 		<sequence>

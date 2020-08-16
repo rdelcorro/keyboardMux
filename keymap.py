@@ -173,7 +173,9 @@ keytable = {
     "KEY_F21": 112,
     "KEY_F22": 113,
     "KEY_F23": 114,
-    "KEY_F24": 115
+    "KEY_F24": 115,
+    "KEY_BRIGHTNESSDOWN": 116,
+    "KEY_BRIGHTNESSUP": 117
 }
 
 # Map modifier keys to array element in the bit array

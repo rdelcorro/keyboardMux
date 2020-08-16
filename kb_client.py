@@ -12,17 +12,18 @@ class Kbrd:
     Take the events from a physically attached keyboard and send the
     HID messages to the keyboard D-Bus server.
     """
-    def __init__(self):
+    def __init__(self, sendCB):
         self.target_length = 6
         self.mod_keys = 0b00000000
         self.pressed_keys = []
         self.have_kb = False
         self.dev = None
-        self.bus = dbus.SystemBus()
-        self.btkobject = self.bus.get_object(HID_DBUS,
-                                             HID_SRVC)
-        self.btk_service = dbus.Interface(self.btkobject,
-                                          HID_DBUS)
+        self.sendCB = sendCB
+        #self.bus = dbus.SystemBus()
+        #self.btkobject = self.bus.get_object(HID_DBUS,
+        #                                     HID_SRVC)
+        #self.btk_service = dbus.Interface(self.btkobject,
+        #                                  HID_DBUS)
         self.wait_for_keyboard()
 
     def wait_for_keyboard(self, event_id=0):
@@ -79,7 +80,9 @@ class Kbrd:
         return [0xA1, 0x01, self.mod_keys, 0, *self.pressed_keys]
 
     def send_keys(self):
-        self.btk_service.send_keys(self.state)
+        print("Sending: ", self.state)
+        self.sendCB(self.state)
+        #self.btk_service.send_keys(self.state)
 
     def event_loop(self):
         """
