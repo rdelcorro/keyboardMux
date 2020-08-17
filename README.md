@@ -2,7 +2,7 @@
 
 ### Problem statement
 
-Connect a single phisical USB keyboard to multiple computers / devices at the same time using bluetooth but send the keypresses to a single device at the same time
+Connect a single physical USB keyboard to multiple computers / devices at the same time using bluetooth but send the keypresses to a single device at the same time
 Allow the user to switch the target device using any key combination
 
 #### Requirements
