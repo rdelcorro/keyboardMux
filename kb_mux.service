@@ -1,0 +1,13 @@
+[Unit]
+Description=Bluetooth keyboard mux
+After=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/ramiro/keyboardMux/keyboardMux
+ExecStart=/usr/bin/python3 /home/ramiro/keyboardMux/keyboardMux/btk_server.py > /tmp/mylog
+StandardInput=tty-force
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
