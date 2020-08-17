@@ -10,8 +10,6 @@ from kb_client import Kbrd
 from gi.repository import GLib
 from dbus.mainloop.glib import DBusGMainLoop
 
-ENABLE_PAIRING = True
-
 
 class BTKbDevice:
     """
