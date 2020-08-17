@@ -31,6 +31,12 @@ The server has a function called ```change_active_target_device``` that has a fe
 In my case I use Fn + F1 to F4 to change the target, but you can use anything. If you do not want to use any dedicated key like volume up to do this and your 
 keyboard is programmable, you can send for example ```!@#$%^``` or some other combination to to this
 
+## Install the requirements
+
+```
+pip3 install -r requirements.txt
+```
+
 ## Execute the server as root
 
 Note, this can be automatically be done on a systemd or any other auto startup script
